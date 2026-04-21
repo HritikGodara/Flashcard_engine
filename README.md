@@ -2,7 +2,7 @@
 
 A flashcard app that generates study cards from PDFs using AI. Upload any text-based PDF, and it creates a deck of Q&A cards within a minute or two. Then you study them using spaced repetition — the app decides which cards you need to see again today based on how well you knew each one.
 
-Live: **[flashengine.vercel.app](https://flashengine.vercel.app)**
+Live: **[flashengine.vercel.app](https://flashcard-engine-six.vercel.app/)**
 
 ---
 

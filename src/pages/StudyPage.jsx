@@ -42,24 +42,6 @@ export default function StudyPage() {
     loadStudySession();
   }, [loadStudySession]);
 
-  // Keyboard shortcuts
-  useEffect(() => {
-    function handleKey(e) {
-      if (sessionComplete) return;
-
-      if (e.code === 'Space' && !isFlipped) {
-        e.preventDefault();
-        flipCard();
-      } else if (isFlipped && e.key >= '0' && e.key <= '4') {
-        e.preventDefault();
-        handleRating(parseInt(e.key));
-      }
-    }
-
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [isFlipped, sessionComplete, currentIndex, handleRating]);
-
   function flipCard() {
     setIsFlipped(true);
   }
@@ -109,6 +91,24 @@ export default function StudyPage() {
       setStartTime(Date.now());
     }
   }, [queue, currentIndex, startTime, streak, maxStreak]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    function handleKey(e) {
+      if (sessionComplete) return;
+
+      if (e.code === 'Space' && !isFlipped) {
+        e.preventDefault();
+        flipCard();
+      } else if (isFlipped && e.key >= '0' && e.key <= '4') {
+        e.preventDefault();
+        handleRating(parseInt(e.key));
+      }
+    }
+
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isFlipped, sessionComplete, currentIndex, handleRating]);
 
   if (loading) {
     return (

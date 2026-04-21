@@ -177,7 +177,7 @@
 - **Platform:** Vercel (free tier)
 - **URL:** TBD (after deployment)
 - **GitHub Repo:** TBD (after setup)
-- **Supabase Project:** aoomhdfvmurbmozwnilu.supabase.co
+- **Supabase Project:** (configured via .env)
 
 ---
 
